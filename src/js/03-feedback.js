@@ -20,6 +20,10 @@ function onInput(e) {
 }
 function onSubmit(e) {
   e.preventDefault();
+  if (!input.value || !textarea.value) {
+    alert('Enter Email and Message!');
+    return;
+  }
   e.currentTarget.reset();
   localStorage.removeItem(KEY);
   console.log(saveForm);    
